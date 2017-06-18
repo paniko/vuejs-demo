@@ -1,5 +1,8 @@
-import _ from 'lodash';
-
+//import _ from 'lodash';
+import Vue from 'vue';
+import App from './app.vue'
+//import VueRouter from 'vue-router';
+/*
 function component () {
   var element = document.createElement('div');
 
@@ -10,3 +13,8 @@ function component () {
 }
 
 document.body.appendChild(component());
+*/
+new Vue({
+  el: '#app',
+  components: { App }
+})
