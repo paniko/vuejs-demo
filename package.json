@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/paniko/vuejs-demo#readme",
   "dependencies": {
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "webpack": "^2.6.1"
   }
 }
