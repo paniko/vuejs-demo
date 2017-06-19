@@ -19,7 +19,20 @@
   <body class="">
     <div class="container ui" id="app">
       <h1>test</h1>
-      <app></app>
+      <!--<app></app>-->
+        <div class="ui secondary  menu">
+            <!-- use router-link component for navigation. -->
+            <!-- specify the link by passing the `to` prop. -->
+            <!-- `<router-link>` will be rendered as an `<a>` tag by default -->
+            <router-link to="/home" router-link-active class="item">Home</router-link>
+            <router-link to="/about"  class="item">About</router-link>
+
+        </div>
+
+        <!-- route outlet -->
+        <!-- component matched by the route will render here -->
+        <router-view></router-view>
+
     </div>
     <!--vuejs-->
 <!--    <script src="https://unpkg.com/vue"></script> -->
