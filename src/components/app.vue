@@ -1,7 +1,6 @@
 <template>
   <div>
     <div class="ui inverted vertical masthead center aligned segment">
-
       <div class="ui container">
         <div class="ui large secondary inverted pointing menu">
           <a class="toc item">
@@ -129,12 +128,30 @@ export default {
       msg: 'Hello from vue-loader!',
       counter: 0,
     }
+  },
+  created: function () {
+    $(document)
+      .ready(function() {
+        // fix menu when passed
+        $('.masthead')
+          .visibility({
+            once: false,
+            onBottomPassed: function() {
+              $('.fixed.menu').transition('fade in');
+            },
+            onBottomPassedReverse: function() {
+              $('.fixed.menu').transition('fade out');
+            }
+          })
+        ;
+
+        // create sidebar and attach to menu open
+        $('.ui.sidebar')
+          .sidebar('attach events', '.toc.item')
+        ;
+
+      })
+    ;
   }
 }
 </script>
-
-<style>
-.message {
-  color: blue;
-}
-</style>

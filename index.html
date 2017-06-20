@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">
     <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
       integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
       crossorigin="anonymous"></script>
-  <!--  <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js"></script>-->
-    <link rel="stylesheet" type="text/css" href="/dist/css/reset.css">
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="/dist/css/reset.css">
     <link rel="stylesheet" type="text/css" href="/dist/css/site.css">
 
     <link rel="stylesheet" type="text/css" href="/dist/css/container.css">
@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="/dist/css/transition.css">
     <script src="/dist/visibility.js"></script>
     <script src="/dist/sidebar.js"></script>
-    <script src="/dist/transition.js"></script>
+    <script src="/dist/transition.js"></script> -->
 
     <meta charset="utf-8">
     <title>Minisite Demo</title>
@@ -152,9 +152,10 @@
     </script>
   </head>
   <body class="pushable">
-    <router-view name="header"></router-view>
+
     <!-- Page Contents -->
     <div class="pusher" id="app">
+        <router-view name="header"></router-view>
         <!-- component matched by the route will render here -->
         <router-view></router-view>
     </div>

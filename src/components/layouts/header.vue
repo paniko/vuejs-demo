@@ -1,7 +1,7 @@
 <template>
   <div>
   <!-- Following Menu -->
-  <div class="ui large top fixed menu transition visible" style="display: flex !important;">
+  <div class="ui large top fixed menu transition hidden" style="display: flex !important;">
     <div class="ui container">
       <!-- use router-link component for navigation. -->
       <!-- specify the link by passing the `to` prop. -->
