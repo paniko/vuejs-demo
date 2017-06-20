@@ -1,8 +1,8 @@
 //import _ from 'lodash';
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Header from './header.vue'
-import App from './app.vue'
+import Header from './components/layouts/header.vue'
+import App from './components/app.vue'
 
 
 /*
