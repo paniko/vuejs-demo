@@ -1,7 +1,10 @@
 //import _ from 'lodash';
 import Vue from 'vue';
-import App from './app.vue'
 import VueRouter from 'vue-router';
+import Header from './header.vue'
+import App from './app.vue'
+
+
 /*
 function component () {
   var element = document.createElement('div');
@@ -30,8 +33,17 @@ const Bar = { template: '<div>bar</div>' }
 // `Vue.extend()`, or just a component options object.
 // We'll talk about nested routes later.
 const routes = [
-  { path: '/home', component: App },
-  { path: '/about', component: Bar }
+  { path: '/home',
+    components: {
+      default: App,
+      header: Header
+    }
+  },
+  { path: '/about',     components: {
+        default: Bar,
+        header: Header
+      }
+  }
 ]
 Vue.use(VueRouter)
 
@@ -49,4 +61,3 @@ const router = new VueRouter({
 const app = new Vue({
   router
 }).$mount('#app')
-
