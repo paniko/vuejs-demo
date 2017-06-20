@@ -8,7 +8,7 @@
         <!-- `<router-link>` will be rendered as an `<a>` tag by default -->
         <router-link to="/home" router-link-active class="item">Home</router-link>
         <router-link to="/about"  class="item">About</router-link>
-        <router-link to="/about"  class="item">Work</router-link>
+        <router-link to="/test"  class="item">Test</router-link>
         <router-link to="/about"  class="item">Company</router-link>
         <router-link to="/about"  class="item">Careers</router-link>
         <div class="right menu">

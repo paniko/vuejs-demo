@@ -3,7 +3,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Header from './components/layouts/header.vue'
 import App from './components/app.vue'
-
+import Test from './components/test.vue'
 
 /*
 function component () {
@@ -41,6 +41,11 @@ const routes = [
   },
   { path: '/about',     components: {
         default: Bar,
+        header: Header
+      }
+  },
+  { path: '/test',     components: {
+        default: Test,
         header: Header
       }
   }

@@ -112,14 +112,7 @@
     </div>
   </div>
 </div>
-  <div class="ui container">
-    <div class="message" >{{ msg }}</div>
-    <div class="">{{counter}}</div>
-    <div>
-      <input type="text" name="" v-model="msg">
-    </div>
-    <a @click="test" class="ui primary button">Click here</a>
-  </div>
+
 </template>
 
 <script>
