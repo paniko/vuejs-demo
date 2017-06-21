@@ -1,5 +1,4 @@
-<template>
-const messages = {
+{
   en: {
     message: {
       home:{
@@ -14,4 +13,3 @@ const messages = {
     }
   }
 }
-</template>
