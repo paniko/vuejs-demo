@@ -2,27 +2,12 @@
   <div>
     <div class="ui inverted vertical masthead center aligned segment">
       <div class="ui container">
-        <div class="ui large secondary inverted pointing menu">
-          <a class="toc item">
-            <i class="sidebar icon"></i>
-          </a>
-          <router-link to="/home" router-link-active class="item">Home</router-link>
-          <router-link to="/about"  class="item">About</router-link>
-          <router-link to="/test"  class="item">Test</router-link>
-          <router-link to="/about"  class="item">Company</router-link>
-          <router-link to="/about"  class="item">Careers</router-link>
-          <div class="right item">
-            <a class="ui inverted button">Log in</a>
-            <a class="ui inverted button">Sign Up</a>
-          </div>
-        </div>
+        <topmenu></topmenu>
       </div>
 
       <div class="ui text container">
-        <h1 class="ui inverted header">
-          Imagine-a-Company
-        </h1>
-        <h2>Do whatever you want when you want to.</h2>
+        <h1 class="ui inverted header">{{ $t("message.home.title") }}</h1>
+        <h2>{{ $t("message.home.description") }}</h2>
         <div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div>
       </div>
 
@@ -80,43 +65,16 @@
         <a class="ui large button">I'm Still Quite Interested</a>
       </div>
     </div>
-
-
-    <div class="ui inverted vertical footer segment">
-      <div class="ui container">
-        <div class="ui stackable inverted divided equal height stackable grid">
-          <div class="three wide column">
-            <h4 class="ui inverted header">About</h4>
-            <div class="ui inverted link list">
-              <a href="#" class="item">Sitemap</a>
-              <a href="#" class="item">Contact Us</a>
-              <a href="#" class="item">Religious Ceremonies</a>
-              <a href="#" class="item">Gazebo Plans</a>
-            </div>
-          </div>
-          <div class="three wide column">
-            <h4 class="ui inverted header">Services</h4>
-            <div class="ui inverted link list">
-              <a href="#" class="item">Banana Pre-Order</a>
-              <a href="#" class="item">DNA FAQ</a>
-              <a href="#" class="item">How To Access</a>
-              <a href="#" class="item">Favorite X-Men</a>
-            </div>
-          </div>
-          <div class="seven wide column">
-            <h4 class="ui inverted header">Footer Header</h4>
-            <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
 </template>
 
 <script>
-
+import Topmenu from './layouts/topmenu.vue'
 export default {
+  components: {
+    topmenu: Topmenu
+  },
   methods: {
      test: function(){
         this.counter += 1 ;
@@ -125,11 +83,13 @@ export default {
   },
   data () {
     return {
-      msg: 'Hello from vue-loader!',
-      counter: 0,
+      title: '',
     }
   },
   created: function () {
+    // fetch the data when the view is created and the data is
+    // already being observed
+    this.fetchData()
     $(document)
       .ready(function() {
         // fix menu when passed
@@ -152,6 +112,17 @@ export default {
 
       })
     ;
+  },
+  watch: {
+    // call again the method if the route changes
+    '$route': 'fetchData'
+  },
+  methods: {
+    fetchData () {
+      this.title = 'Esempio Titolo'
+
+
+    }
   }
 }
 </script>

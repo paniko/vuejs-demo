@@ -1,0 +1,17 @@
+<template>
+const messages = {
+  en: {
+    message: {
+      home:{
+        title: 'hello world',
+        description: 'Do whatever you want when you want to.',
+      }
+    }
+  },
+  ja: {
+    message: {
+      title: 'こんにちは、世界'
+    }
+  }
+}
+</template>
